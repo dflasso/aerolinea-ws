@@ -53,7 +53,7 @@ public class GeographicLocationService {
 	public GeographicLocation findById(Long id) {
 		Optional<GeographicLocation> optpLocation =  geographicLocationDAO.findById(id);
 		
-		if(optpLocation.isEmpty()) {
+		if(!optpLocation.isPresent()) {
 			GeographicLocation newLocations = new GeographicLocation();
 			newLocations.setName("Quito");
 			newLocations.setCountry("Ecuador");

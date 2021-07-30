@@ -19,7 +19,7 @@ public class AgenciaServices {
 	public Agency findByRUC(String RUC) {
 		Optional<Agency> agOpt =  agenciaDAO.findByRUC(RUC);
 		
-		if(agOpt.isEmpty()) {
+		if(!agOpt.isPresent()) {
 			Agency agency = new Agency();
 			agency.setId(1L);
 			agOpt = Optional.of(agency);

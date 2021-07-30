@@ -19,7 +19,7 @@ public class ClientServices {
 	public Client findById(Long id) {
 		Optional<Client> clOpt = clientDAO.findById(id);
 		
-		if(clOpt.isEmpty()) {
+		if(!clOpt.isPresent()) {
 			Client cl = new Client();
 			cl.setId(1L);
 			clOpt = Optional.of(cl);

@@ -36,7 +36,7 @@ public class FlightsServices {
 	public Flights findById(Long id) {
 		Optional<Flights> fliOpt = flightsDAO.findById(id);
 		
-		if(fliOpt.isEmpty()) {
+		if(!fliOpt.isPresent()) {
 			GeographicLocation origin = geographicLocationSevices.findById(1L);
 			GeographicLocation destiny = geographicLocationSevices.findById(2L);
 			Flights fl = new Flights();

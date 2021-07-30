@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ec.edu.espe.monster.aerolineacondor.model.DAO.GeographicLocationDAO;
 import ec.edu.espe.monster.aerolineacondor.model.entity.GeographicLocation;
 import ec.edu.espe.monster.aerolineacondor.services.GeographicLocationService;
 import io.swagger.annotations.Api;
